@@ -58,50 +58,31 @@ function getFibonacciNumber(index) {
     ? index
     : getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
 }
-
-/**
- * Returns the sum of all numbers from 1 to n.
- *
- * @param {number} n
- * @return {number}
- *
- * @example:
- *   5  => 15 // (1+2+3+4+5)
- *   10 => 55 // (1+2+3+...+10)
- *   1  => 1
- */
-function getSumToN(/* n */) {
-  throw new Error('Not implemented');
+function getSumToN(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; ) {
+    sum += i;
+    i += 1;
+  }
+  return sum;
 }
-
-/**
- * Returns the sum of the digits of a given number.
- *
- * @param {number} num
- * @return {number}
- *
- * @example:
- *   123 => 6  // (1+2+3)
- *   202 => 4  // (2+0+2)
- *   5   => 5  // 5
- */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  const string = num.toString();
+  const arr = string.split('');
+  let sum = 0;
+  for (let i = 0; i <= arr.length - 1; ) {
+    sum += Number(arr[i]);
+    i += 1;
+  }
+  return sum;
 }
-
-/**
- * Returns true if the given number is a power of two, false otherwise.
- *
- * @param {number} num
- * @return {boolean}
- *
- * @example:
- *   4   => true
- *   16  => true
- *   15  => false
- */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  let result = false;
+  for (let i = 1; i <= num; ) {
+    if (2 ** i === num) result = true;
+    i += 1;
+  }
+  return result;
 }
 
 /**
