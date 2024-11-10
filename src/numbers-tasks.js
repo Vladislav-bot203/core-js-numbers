@@ -1,64 +1,32 @@
 function getRectangleArea(width, height) {
   return width * height;
 }
-
 function getCircleCircumference(radius) {
   return Math.PI * radius * 2;
 }
-
 function getAverage(value1, value2) {
   return value1 / 2 + value2 / 2;
 }
-
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
   return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** (1 / 2);
 }
-
 function getLinearEquationRoot(a, b) {
   return -b / a;
 }
-
 function getAngleBetweenVectors(x1, y1, x2, y2) {
   return Math.acos(
     (x1 * x2 + y1 * y2) /
       ((x1 ** 2 + y1 ** 2) ** (1 / 2) * (x2 ** 2 + y2 ** 2) ** (1 / 2))
   );
 }
-
 function getLastDigit(value) {
   return value % 10;
 }
-
-/**
- * Returns a number by given string representation.
- *
- * @param {string} value
- * @return {number}
- *
- * @example:
- *    '100'     => 100
- *     '37'     => 37
- * '-525.5'     => -525.5
- */
 function parseNumberFromString(value) {
   return +value;
 }
-
-/**
- * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
- *
- * @param {number} a
- * @param {number} b
- * @param {number} c
- * @return {number}
- *
- * @example:
- *   1,1,1   => 1.7320508075688772
- *   3,3,3   => 5.196152422706632
- *   1,2,3   => 3.741657386773941
- */
-function getParallelepipedDiagonal(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getParallelepipedDiagonal(a, b, c) {
+  return (a ** 2 + b ** 2 + c ** 2) ** (1 / 2);
 }
 
 /**
