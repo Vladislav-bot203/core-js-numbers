@@ -313,25 +313,13 @@ function getIntegerPartNumber(/* number */) {
  * 1, 2, 3       => 6
  * 0.1, 0.2, 0.3 => 0.6
  */
-function getSumOfNumbers(/* x1, x2, x3 */) {
-  throw new Error('Not implemented');
+function getSumOfNumbers(x1, x2, x3) {
+  const sum = x1 + x2 + x3;
+  return +sum.toFixed(2);
 }
 function getMaxNumber(firstNumber, secondNumber) {
   return Math.max(firstNumber, secondNumber);
 }
-
-/**
- * Returns a random integer in the range from min to max.
- *
- * @param {number} min
- * @param {number} max
- * @return {number}
- *
- * @example:
- * 1, 2  => 1 | 2
- * -5, 0 => -5 | -4 | -3 | -2 | -1 | 0
- * -1, 1 => -1 | 0 | 1
- */
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
