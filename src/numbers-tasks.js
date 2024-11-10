@@ -362,22 +362,25 @@ function getRandomInteger(/* min, max */) {
 function getHypotenuse(/* a, b */) {
   throw new Error('Not implemented');
 }
-
-/**
- * Returns count of odd numbers from zero to the resulting number.
- * The resulting number is taken into account.
- *
- * @param {number} number
- * @return {number}
- *
- * @example:
- * 4  => 2
- * 5  => 3
- * 10 => 5
- * 15 => 8
- */
-function getCountOfOddNumbers(/* number */) {
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  let oddCount = 0;
+  let i = 1;
+  if (number > 0) {
+    for (i; i <= number; ) {
+      if (i % 2 !== 0) {
+        oddCount += 1;
+      }
+      i += 1;
+    }
+  } else if (number < 0) {
+    for (let b = number; b <= 0; ) {
+      if (b % 2 !== 0) {
+        oddCount += 1;
+      }
+      b += 1;
+    }
+  }
+  return oddCount;
 }
 
 module.exports = {
