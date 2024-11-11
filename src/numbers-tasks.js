@@ -161,19 +161,8 @@ function getMaxNumber(firstNumber, secondNumber) {
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-/**
- * Returns the length of the hypotenuse of a right triangle.
- *
- * @param {number} a
- * @param {number} b
- * @return {number}
- *
- * @example:
- * 3, 4 => 5
- */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  return Math.hypot(a, b);
 }
 function getCountOfOddNumbers(number) {
   let oddCount = 0;
