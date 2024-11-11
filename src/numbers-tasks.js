@@ -119,21 +119,8 @@ function toExponential(/* number, fractionDigits */) {
 function toFixed(number, fractionDigits) {
   return number.toFixed(fractionDigits).toString();
 }
-
-/**
- * Returns a string representation of a number in normal (fixed-point or exponential)
- * notation rounded to precision significant digits.
- *
- * @param {number} number
- * @param {number} precision
- * @return {string}
- *
- * @example:
- * 12345, 7    => '12345.00'
- * 12.345, 4   => '12.35'
- */
-function toPrecision(/* number, precision */) {
-  throw new Error('Not implemented');
+function toPrecision(number, precision) {
+  return number.toPrecision(precision);
 }
 function getNumberValue(number) {
   return number.valueOf();
