@@ -169,35 +169,11 @@ function roundToSmallestInteger(number) {
 function roundToLargestInteger(number) {
   return Math.ceil(number);
 }
-
-/**
- * Returns the value of a number rounded to the nearest integer.
- *
- * @param {number} number
- * @return {number}
- *
- * @example:
- * 5.5  => 6
- * 5.4  => 5
- * -5.5 => -5
- */
 function roundToNearestInteger(number) {
   return Math.round(number);
 }
-
-/**
- * Returns the integer part of a number by removing any fractional digits.
- *
- * @param {number} number
- * @return {number}
- *
- * @example:
- * 5.5  => 5
- * 5.4  => 5
- * -5.5 => -5
- */
-function getIntegerPartNumber(/* number */) {
-  throw new Error('Not implemented');
+function getIntegerPartNumber(number) {
+  return Math.trunc(number);
 }
 function getSumOfNumbers(x1, x2, x3) {
   const sum = x1 + x2 + x3;
